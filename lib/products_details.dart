@@ -3,6 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'product_class.dart';
 
+
+const String baseApiUrl =
+    "https://mobile-project-1-hfjv.onrender.com";
+
+
 const String baseImageUrl =
     "https://hotnrqpzbwnniqjtkofu.supabase.co/storage/v1/object/public/imagesproject/";
 
@@ -33,9 +38,10 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
   // =======================
   Future<void> fetchProductDetails() async {
     final response = await http.get(
-      Uri.parse(
-        "http://127.0.0.1:3000/product_details/${widget.productId}",
-      ),
+    Uri.parse(
+  "$baseApiUrl/product_details/${widget.productId}",
+),
+
     );
 
     if (response.statusCode == 200) {

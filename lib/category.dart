@@ -4,6 +4,9 @@ import 'package:http/http.dart' as http;
 import 'category_class.dart';
 import 'product.dart'; // ⬅️ مهم
 
+const String baseApiUrl =
+    "https://mobile-project-1-hfjv.onrender.com";
+
 class CategoriesRow extends StatefulWidget {
   const CategoriesRow({super.key});
 
@@ -25,7 +28,8 @@ class _CategoriesRowState extends State<CategoriesRow> {
   Future<void> fetchCategories() async {
     try {
       final response =
-          await http.get(Uri.parse("http://127.0.0.1:3000/category"));
+          await http.get( Uri.parse(
+  "$baseApiUrl/category"));
 
       if (response.statusCode == 200) {
         final List data = json.decode(response.body);

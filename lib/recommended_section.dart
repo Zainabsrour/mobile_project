@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'product_class.dart';
 
+
+const String baseApiUrl =
+    "https://mobile-project-1-hfjv.onrender.com";
 const String baseImageUrl =
     "https://hotnrqpzbwnniqjtkofu.supabase.co/storage/v1/object/public/imagesproject/";
 
@@ -28,7 +31,8 @@ class _RecommendedSectionState extends State<RecommendedSection> {
   // =======================
   Future<void> fetchRecommended() async {
     final response =
-        await http.get(Uri.parse("http://127.0.0.1:3000/products_random"));
+        await http.get( Uri.parse(
+  "$baseApiUrl/products_random"));
 
     if (response.statusCode == 200) {
       final List data = json.decode(response.body);

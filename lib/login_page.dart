@@ -4,6 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'Homepage.dart'; // 🔁 تأكد أن اسم الملف صحيح
 
+
+const String baseApiUrl =
+    "https://mobile-project-1-hfjv.onrender.com";
+
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
 
@@ -26,7 +30,8 @@ class LoginPage extends StatelessWidget {
 
     try {
       final response = await http.post(
-        Uri.parse("http://127.0.0.1:3000/login"), 
+       Uri.parse(
+  "$baseApiUrl/login"), 
         headers: {"Content-Type": "application/json"},
         body: jsonEncode({
           "name": name,
