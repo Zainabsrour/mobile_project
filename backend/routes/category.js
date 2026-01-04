@@ -9,7 +9,7 @@ const supabase = createClient(
 
 router.get("/", async (req, res) => {
   const { data, error } = await supabase
-    .from("categories") // اسم الجدول بالـ Supabase
+    .from("categories") //name of the table in the supabase
     .select("category_id, category_name")
     .order("category_id");
 

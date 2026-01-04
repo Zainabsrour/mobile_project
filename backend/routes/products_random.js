@@ -7,7 +7,7 @@ const supabase = createClient(
   process.env.SUPABASE_SERVICE_ROLE_KEY
 );
 
-// GET random products (مثلاً 4)
+// GET random products (ex 4)
 router.get("/", async (req, res) => {
   const limit = parseInt(req.query.limit) || 4;
 

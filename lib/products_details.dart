@@ -33,9 +33,8 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
     fetchProductDetails();
   }
 
-  // =======================
   // FETCH PRODUCT
-  // =======================
+
   Future<void> fetchProductDetails() async {
     final response = await http.get(
     Uri.parse(
@@ -57,9 +56,8 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
     }
   }
 
-  // =======================
   // BUY NOW DIALOG
-  // =======================
+ 
   void showBuyNowDialog() {
     final nameController = TextEditingController();
     final emailController = TextEditingController();
@@ -142,9 +140,8 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
     );
   }
 
-  // =======================
-  // SUCCESS DIALOG (UNCHANGED)
-  // =======================
+  // SUCCESS DIALOG 
+
   void showSuccessDialog() {
     showDialog(
       context: context,
@@ -181,9 +178,9 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
     );
   }
 
-  // =======================
+
   // INPUT FIELD (GREEN FOCUS)
-  // =======================
+  
   Widget buildInput(
     String hint,
     TextEditingController controller, {
@@ -217,9 +214,9 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
     );
   }
 
-  // =======================
+  
   // UI
-  // =======================
+
   @override
   Widget build(BuildContext context) {
     if (loading) {

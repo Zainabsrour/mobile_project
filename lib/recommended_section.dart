@@ -26,9 +26,8 @@ class _RecommendedSectionState extends State<RecommendedSection> {
     fetchRecommended();
   }
 
-  // =======================
   // FETCH RANDOM PRODUCTS
-  // =======================
+
   Future<void> fetchRecommended() async {
     final response =
         await http.get( Uri.parse(
@@ -59,9 +58,9 @@ class _RecommendedSectionState extends State<RecommendedSection> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // =======================
+         
           // TITLE
-          // =======================
+          
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: const [
@@ -81,9 +80,9 @@ class _RecommendedSectionState extends State<RecommendedSection> {
 
           const SizedBox(height: 16),
 
-          // =======================
+          
           // GRID (2 PER ROW)
-          // =======================
+          
           GridView.builder(
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
@@ -93,7 +92,7 @@ class _RecommendedSectionState extends State<RecommendedSection> {
               crossAxisCount: 2, // ✅ 2 per row
               crossAxisSpacing: 14,
               mainAxisSpacing: 16,
-              childAspectRatio: 0.72, // نفس شكل الصورة
+              childAspectRatio: 0.72, // nfs shkl l sora
             ),
             itemBuilder: (context, index) {
               final product = products[index];
@@ -106,9 +105,9 @@ class _RecommendedSectionState extends State<RecommendedSection> {
   }
 }
 
-// =======================
+
 // PRODUCT CARD
-// =======================
+
 class _RecommendedCard extends StatelessWidget {
   final Product product;
 

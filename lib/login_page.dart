@@ -2,7 +2,7 @@ import 'dart:ui';
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'Homepage.dart'; // 🔁 تأكد أن اسم الملف صحيح
+import 'Homepage.dart'; 
 
 
 const String baseApiUrl =
@@ -14,9 +14,9 @@ class LoginPage extends StatelessWidget {
   final TextEditingController nameController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
-  // =======================
+  
   // LOGIN API
-  // =======================
+ 
   Future<void> login(BuildContext context) async {
     final name = nameController.text.trim();
     final password = passwordController.text.trim();
@@ -40,7 +40,7 @@ class LoginPage extends StatelessWidget {
       );
 
       if (response.statusCode == 200) {
-        // ✅ LOGIN SUCCESS ➜ GO TO HOME PAGE
+        // LOGIN SUCCESS --- GO TO HOME PAGE
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(
@@ -65,9 +65,9 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          // =======================
+         
           // BACKGROUND IMAGE
-          // =======================
+         
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
@@ -77,9 +77,9 @@ class LoginPage extends StatelessWidget {
             ),
           ),
 
-          // =======================
+        
           // BLUR
-          // =======================
+          
           BackdropFilter(
             filter: ImageFilter.blur(sigmaX: 12, sigmaY: 12),
             child: Container(
@@ -87,9 +87,9 @@ class LoginPage extends StatelessWidget {
             ),
           ),
 
-          // =======================
+         
           // CONTENT
-          // =======================
+
           SafeArea(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24),
@@ -179,9 +179,9 @@ class LoginPage extends StatelessWidget {
   }
 }
 
-// =======================
+
 // GLASS INPUT
-// =======================
+
 class _GlassInput extends StatelessWidget {
   final String hint;
   final IconData icon;

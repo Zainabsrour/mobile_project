@@ -76,9 +76,9 @@ class _FirstSectionState extends State<FirstSection> {
       padding: const EdgeInsets.fromLTRB(16, 16, 16, 6),
       child: Column(
         children: [
-          // =======================
+         
           // 🔍 SEARCH + ICONS (OUTSIDE IMAGE)
-          // =======================
+          
           Row(
             children: [
               Expanded(
@@ -117,9 +117,9 @@ class _FirstSectionState extends State<FirstSection> {
 
           const SizedBox(height: 14),
 
-          // =======================
+          
           // IMAGE CARD
-          // =======================
+         
           ClipRRect(
             borderRadius: BorderRadius.circular(18),
             child: Stack(
@@ -184,9 +184,8 @@ class _FirstSectionState extends State<FirstSection> {
   }
 }
 
-// =======================
+
 // ICON WIDGET
-// =======================
 class _TopIcon extends StatelessWidget {
   final IconData icon;
 

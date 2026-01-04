@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'category_class.dart';
-import 'product.dart'; // ⬅️ مهم
+import 'product.dart'; 
 
 const String baseApiUrl =
     "https://mobile-project-1-hfjv.onrender.com";
@@ -91,7 +91,7 @@ class _CategoriesRowState extends State<CategoriesRow> {
             return InkWell(
               borderRadius: BorderRadius.circular(50),
               onTap: () {
-                // ✅ NAVIGATION
+                //  NAVIGATION
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -114,9 +114,9 @@ class _CategoriesRowState extends State<CategoriesRow> {
   }
 }
 
-// =======================
+
 // UI Item
-// =======================
+
 class CategoryItem extends StatelessWidget {
   final IconData icon;
   final String label;

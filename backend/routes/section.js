@@ -9,10 +9,10 @@ const supabase = createClient(
 
 router.get("/", async (req, res) => {
   const { data, error } = await supabase
-    .from("First_section") // ✅ اسم الجدول الصح
+    .from("First_section") //name in the database table
     .select("section_tittle, section_description, section_image")
     .limit(1)
-    .single(); // 👈 مهم
+    .single(); 
 
   if (error) {
     return res.status(500).json({ error: error.message });
